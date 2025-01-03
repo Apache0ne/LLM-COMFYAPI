@@ -1,0 +1,80 @@
+.main-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Reduced margin to push the canvas up */
+}
+
+.main-content.open {
+  width: 70%; /* Adjust width when side menu is open */
+  margin-top: 10px; /* Reduced margin to push the canvas up */
+}
+
+.generated-image-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  position: relative;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.generated-image {
+  margin-top: 20px; /* Reduced margin to bring the image up */
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.generated-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.feedback {
+  color: var(--success-color); /* Success color */
+  margin-top: 5px;
+}
+
+.error {
+  color: var(--error-color); /* Error color */
+  margin-top: 5px;
+}
+
+.loading-message {
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+.button-container {
+  margin-top: 10px; /* Reduced margin to bring the button up */
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  background-color: var(--primary-color); /* Button background color */
+  border: none;
+  color: white;
+  padding: var(--button-padding);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: var(--button-border-radius);
+}
+
+.button-container button:hover {
+  background-color: var(--secondary-color); /* Button hover background color */
+}

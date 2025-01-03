@@ -1,0 +1,11 @@
+[SDXL]
+GoblinXL.safetensors
+Rorschach1024.safetensors
+
+[SD]
+himejima_akeno-10.safetensors
+sailor,venus.safetensors
+
+[FLUX]
+wsj-portrait.safetensors
+Ancient-greek-pottery-style.safetensors

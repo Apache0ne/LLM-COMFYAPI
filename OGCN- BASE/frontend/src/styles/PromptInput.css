@@ -1,0 +1,35 @@
+.prompt-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.prompt-input textarea {
+  padding: var(--input-padding);
+  margin: var(--input-margin-bottom);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: 16px;
+  height: 100px;
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+  border: 1px solid var(--input-border-color);
+}
+
+.prompt-input button {
+  padding: var(--button-padding);
+  margin: 4px 2px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.prompt-input button:hover {
+  background-color: var(--secondary-color);
+}

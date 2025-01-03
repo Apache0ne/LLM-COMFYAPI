@@ -1,0 +1,81 @@
+.side-menu {
+  position: absolute; /* Position the sidebar absolutely */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* Start with the side menu closed */
+  background-color: var(--input-background-color); /* Sub background color for boxes */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  transition: width 0.3s ease;
+  z-index: 1000; /* Ensure it stays above other content */
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.side-menu.open {
+  width: 370px; /* Increased width to 370px when open */
+}
+
+.side-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0px; /* Lower the content below the button */
+}
+
+.side-menu-content h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.side-menu-content select {
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid var(--input-border-color); /* Darker border color for contrast */
+  border-radius: var(--border-radius);
+  background-color: var(--input-background-color); /* Darker background for inputs */
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.fold-button {
+  position: absolute;
+  top: 5px;
+  left: -16px; /* Position the button outside the side menu */
+  background-color: var(--switch-checked-background-color-two); /* Button background color */
+  color: white;
+  border: none;
+  padding: calc(var(--fold-button-size) / 2);
+  border-radius: 50%;
+  cursor: pointer; /* Use a larger pointer cursor */
+  transition: background-color 0.3s ease;
+  z-index: 1001; /* Ensure it stays above other content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.fold-button:hover {
+  background-color: var(--switch-checked-background-color-two); /* Button hover background color */
+}
+
+.fold-button::before {
+  content: '»'; /* Default arrow pointing outwards» */
+  transition: transform 0.3s ease;
+}
+
+.fold-button.open::before {
+  content: '«'; /* Arrow pointing inwards« */
+  transform: rotate(180deg); /* Optional: Rotate the arrow */
+}
+
+.fold-button.open {
+  left: 5px; /* Adjust position when side menu is open */
+}
+
+.side-menu.closed .fold-button {
+  left: 5px; /* Stick the button to the side when closed */
+}

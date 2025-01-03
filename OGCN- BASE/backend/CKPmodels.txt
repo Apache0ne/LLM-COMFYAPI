@@ -1,0 +1,11 @@
+[SDXL]
+creapromptLightning_creapromtHypersdxlV1.safetensors
+sdxl_model2.safetensors
+
+[SD]
+epicrealism_naturalSinRC1VAE.safetensors
+sd_model2.safetensors
+
+[FLUX]
+flux1-dev-bnb-nf4-v2.safetensors
+flux_model2.safetensors

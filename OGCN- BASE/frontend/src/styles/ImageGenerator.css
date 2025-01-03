@@ -1,0 +1,153 @@
+.image-generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px; /* Set max-width to 1600px */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-generator {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  position: relative; /* Ensure the sidebar is positioned relative to this container */
+}
+
+.chat-box {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--input-background-color); /* Sub background color for boxes */
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 600px;
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.prompt-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  max-height: 400px; /* Adjust the max-height as needed */
+  border: 1px solid var(--input-border-color); /* Add border for better separation */
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+.prompt-message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  max-width: 80%;
+  word-wrap: break-word;
+  background-color: var(--background-color); /* Darker background for messages */
+}
+
+.user-prompt {
+  background-color: var(--input-background-color); /* Darker background for inputs */
+  border: 1px solid var(--input-border-color); /* Darker border color for contrast */
+  align-self: flex-start;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.improved-prompt {
+  background-color: #2a2a2a; /* Slightly darker background for contrast */
+  border: 1px solid var(--input-border-color); /* Darker border color for contrast */
+  align-self: flex-end;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.toggle-save {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: var(--switch-width);
+  height: var(--switch-height);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-background-color);
+  transition: .4s;
+  border-radius: var(--switch-height);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--switch-thumb-size);
+  width: var(--switch-thumb-size);
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--switch-thumb-color);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--switch-checked-background-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(calc(var(--switch-width) - var(--switch-thumb-size) - 4px));
+}
+
+.slider.round {
+  border-radius: var(--switch-height);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.back-button {
+  background-color: var(--primary-color); /* Button background color */
+  border: none;
+  color: white;
+  padding: var(--button-padding);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: var(--secondary-color); /* Button hover background color */
+}
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+}

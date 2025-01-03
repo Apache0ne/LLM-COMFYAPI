@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  font-family: var(--font-family);
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.App-link {
+  color: var(--secondary-color);
+}

@@ -1,0 +1,68 @@
+{
+  "workflow1": {
+    "3": {
+      "inputs": {
+        "seed": 1113884446105075,
+        "steps": 4,
+        "cfg": 1,
+        "sampler_name": "dpmpp_sde",
+        "scheduler": "normal",
+        "denoise": 1,
+        "model": ["4", 0],
+        "positive": ["6", 0],
+        "negative": ["7", 0],
+        "latent_image": ["5", 0]
+      },
+      "class_type": "KSampler"
+    },
+    "4": {
+      "inputs": {
+        "ckpt_name": "selected_model"
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "5": {
+      "inputs": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1
+      },
+      "class_type": "EmptyLatentImage"
+    },
+    "6": {
+      "inputs": {
+        "text": "improved_prompt_image",
+        "clip": ["4", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "7": {
+      "inputs": {
+        "text": "text, watermark",
+        "clip": ["4", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "8": {
+      "inputs": {
+        "samples": ["3", 0],
+        "vae": ["4", 2]
+      },
+      "class_type": "VAEDecode"
+    },
+    "13": {
+      "inputs": {
+        "filename_prefix": "ComfyUI_API_Testing",
+        "images": ["8", 0]
+      },
+      "class_type": "SaveImage"
+    }
+  },
+  "workflow2": {
+    "description": "Workflow 2 description",
+    "steps": [
+      {"step1": "Step 1 details"},
+      {"step2": "Step 2 details"}
+    ]
+  }
+}

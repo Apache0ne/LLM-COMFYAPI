@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: var(--code-font-family);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: var(--button-padding);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: var(--button-border-radius);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: var(--input-padding);
+  margin-bottom: var(--input-margin-bottom);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 5px;
+}
+
+.success {
+  color: var(--success-color);
+  margin-top: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+.fold-button {
+  position: absolute;
+  top: 20px;
+  right: -40px; /* Position the button outside the side menu */
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fold-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.fold-button.open {
+  right: -60px; /* Adjust position when side menu is open */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: var(--switch-width);
+  height: var(--switch-height);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-background-color);
+  transition: .4s;
+  border-radius: var(--switch-height);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--switch-thumb-size);
+  width: var(--switch-thumb-size);
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--switch-thumb-color);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--switch-checked-background-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(calc(var(--switch-width) - var(--switch-thumb-size) - 4px));
+}
+
+.slider.round {
+  border-radius: var(--switch-height);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

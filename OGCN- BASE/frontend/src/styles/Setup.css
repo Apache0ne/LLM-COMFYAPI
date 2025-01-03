@@ -1,0 +1,53 @@
+.setup {
+  max-width: 400px; /* Limit the width of the setup form */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color); /* Sub background color for boxes */
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.setup div {
+  margin-bottom: 15px;
+}
+
+.setup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.setup input, .setup select {
+  width: 100%;
+  padding: var(--input-padding);
+  box-sizing: border-box;
+  border: 1px solid var(--input-border-color); /* Darker border color for contrast */
+  border-radius: var(--border-radius);
+  background-color: var(--input-background-color); /* Darker background for inputs */
+  color: var(--text-color); /* Light text color for contrast */
+}
+
+.setup button {
+  background-color: var(--primary-color); /* Button background color */
+  border: none;
+  color: white;
+  padding: var(--button-padding);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: var(--button-border-radius);
+}
+
+.setup button:hover {
+  background-color: var(--secondary-color); /* Button hover background color */
+}
+
+.error {
+  color: var(--error-color); /* Error color */
+  margin-top: 5px;
+}
